@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>ODD EVEN CALCULATOR</title>
+</head>
+<script>
+    function calculate(){
+      let box1=document.getElementById("box1");
+      box2=document.getElementById("box2");
+      if(box1.value,box2.value==''){
+      alert("Empty inputs not allowed")
+      }
+      else if(box1.value<=box2.value==''){
+        alert("value of A is greater than are equal to the value of B.please enter less value.")
+      }
+    else{
+   var Array=[]
+      oddArray=[]
+      evenArray=[]
+      sum = 0
+      oddSum = 0
+      evenSum = 0
+      
+
+      totalValue=document.getElementById('Value')
+       valueAdd=document.getElementById('addValue')
+       totalLength=document.getElementById('totalLength')
+      evenNumbers=document.getElementById('evenValue')
+      evenSumTotal=document.getElementById('evenSum')
+      oddNumbers=document.getElementById('oddValue')
+      oddSumTotal=document.getElementById('oddSum')
+     
+      
+       
+     for(let i=Number(box1.value);i<=Number(box2.value);i++){
+     Array.push(i)
+     sum+=i
+     totalValue.innerHTML='The Numbers in between<b style=color:red> A and B=</b>'+'<b style=color:red>'+Array+'</b>'
+     valueAdd.innerHTML='The sum of total numbers is <b style=color:red>A and B=</b>'+'<b style=color:red >'+sum+'</b>'
+      totalLength.innerHTML='The total numbers in between<b style=color:red> A and B=</b> '+'<b style=color:red>'+Array.length+'</b>'
+        if(i%2==0){
+          evenArray.push(i)
+          evenSum+=i
+          evenNumbers.innerHTML='Even numbers in between <b style=color:red>A and B =</b>' + '<b style=color:red>' + evenArray + '</b>'
+          evenSumTotal.innerHTML='The sum of even numbers in between <b style=color:red>A and B =</b>' + '<b style=color:red>' + evenSum + '</b>'
+        }
+          else{
+            oddArray.push(i)
+            oddSum+=i
+            oddNumbers.innerHTML='odd numbers in between <b style=color:red>A and B =</b>' + '<b style=color:red>' + oddArray + '</b>'
+            oddSumTotal.innerHTML='The sum of even numbers in between <b style=color:red>A and B =</b>' + '<b style=color:red>' + oddSum + '</b>'
+          }
+        }
+     }
+     
+            
+}  
+</script>
+
+<body style="background-color: rgb(182, 126, 235);">
+   <div class="container">
+        <div class="col-lg-12">
+    <h1 class="text-center mt-3" style="color:rgb(248, 96, 50);text-shadow: 2px 2px 2px rgb(204, 195, 195);">ODD EVEN CALCULATOR</h1>
+    </div>
+    <div class=" row ">
+        <div class="col-lg-6  mt-5 text-center"style="display:inline-flex;">
+         <label style="font-size: 28px;padding: 20px;margin-top: 5px;" for="text" id="text1"><b>A=</b></label>   
+        <input style="font-size: 30px;border: 2px solid gray;border-radius: 15px;padding: 20px;" type="number" id="box1" name="text" value="" placeholder="00000-00000">
+        </div>
+        <div class="col-lg-6  mt-5 text-center"style="display:inline-flex;">
+         <label style="font-size: 28px;padding: 20px;margin-top: 5px;" for="text" id="text2"><b>B=</b></label>   
+        <input style="font-size: 30px;border: 2px solid gray;border-radius: 15px;padding: 20px;" type="number" id="box2" name="text" value="" placeholder="00000-00000">
+        </div>
+    </div>
+    
+      <div class="col-lg-12 text-center mt-4 ">
+    <button onclick="calculate()" class=" text-white btn " style="background-color:rgb(248, 96, 57);border:2px solid rgb(248, 185, 113); font-size: 25px;border-radius: 10px;" type="button" id="btn1" value="Calculate"><b>Calculate</b></button>
+    </div> <br> 
+     <div class=" col-lg-12 mt-3 text-center"style="font-weight:500;font-size:larger;">
+        <div>
+             <span id="Value"></span>
+        </div>
+        <div>
+             <span id="addValue"></span>
+        </div>
+        <div>
+             <span id="totalLength"></span>
+        </div>
+        <div>
+             <span id="evenValue"></span>
+        </div>
+        <div>
+             <span id="evenSum"></span>
+        </div>
+        <div>
+             <span id="oddValue"></span>
+        </div>
+        <div>
+             <span id="oddSum"></span>
+        </div>
+        
+     </div>
+
+
+    </div>
+</body>
+</html>

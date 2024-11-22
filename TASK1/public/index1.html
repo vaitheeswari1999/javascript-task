@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>INPUT CALCULATOR</title>
+
+    <script>
+       function calc(){
+         let box1=document.getElementById("box1");
+         box2=document.getElementById("box2");
+        if(box1.value,box2.value==''){
+            alert('Empty inputs not allowed')
+        }   
+    
+    else{
+        let valueAdd=Number(box1.value)+Number(box2.value);
+        document.getElementById("addvalue")
+        addValue.innerHTML="Addition of this inputs is<b style=color:red> A+B=</b>"+"<b style=color:red>"+valueAdd+"</b>"
+
+        let valueSub=Number(box1.value)-Number(box2.value);
+        var subvalue=document.getElementById("subValue")
+        subValue.innerHTML="Subtraction of this inputs is <b style=color:red>A-B=</b>"+"<b style=color:red>"+valueSub+"</b>"
+
+        let valueMultiply=Number(box1.value)*Number(box2.value);
+        var multiplyValue=document.getElementById("multiplyValue")
+        multiplyValue.innerHTML="Multiplication of this inputs is <b style=color:red>A*B=</b>"+"<b style=color:red>"+valueMultiply+"</b>"
+
+        let valueDiv=Number(box1.value)/Number(box2.value);
+        var divValue=document.getElementById("divisionValue")
+        divisionValue.innerHTML="Division of this inputs is <b style=color:red>A/B=</b>"+"<b style=color:red>"+valueDiv+"</b>"
+        
+        let valueSquared=valueAdd*valueAdd
+        var squaredValue=document.getElementById("squaredValue")
+        squaredValue.innerHTML="Squared the sum value of<b style=color:red> A and B=</b>"+"<b style=color:red>"+valueSquared+"</b>"
+
+        let valuesquareRoot=Math.sqrt(valueAdd)
+        var squareRootValue=document.getElementById("squareRoot")
+        squareRoot.innerHTML="Squareroot the sum value of<b style=color:red> A and B=</b>"+"<b style=color:red>"+valuesquareRoot+"</b>"
+
+        let valueLog=Math.log(valueAdd)
+        var logValue=document.getElementById("logValue")
+        logValue.innerHTML="log<b style=color:red>(A+B)=</b>"+"<b style=color:red>"+valueLog+"</b>"
+
+        let valueSin=Math.sin(valueAdd)
+        var sinValue=document.getElementById("sinValue")
+        sinValue.innerHTML="Sin<b style=color:red>(A+B)=</b>"+"<b style=color:red>"+valueSin+"</b>"
+
+        let valueCos=Math.cos(valueAdd)
+        var cosValue=document.getElementById("cosValue")
+        cosValue.innerHTML="Cos<b style=color:red>(A+B)=</b>"+"<b style=color:red>"+valueCos+"</b>"
+
+        let valueTan=Math.tan(valueAdd)
+        var tanValue=document.getElementById("tanValue")
+        tanValue.innerHTML="Tan<b style=color:red>(A+B)=</b>"+"<b style=color:red>"+valueTan+"</b>"
+
+
+    }
+}
+    </script>
+    
+</head>
+<body style="background-color: rgb(182, 126, 235);">
+    <div class="container">
+        <div class="col-lg-12">
+    <h1 class="text-center mt-3" style="color:rgb(248, 96, 50);text-shadow: 2px 2px 2px rgb(204, 195, 195);">INPUT CALCULATOR</h1>
+    </div>
+    <div class=" row ">
+        <div class="col-lg-6  mt-5 text-center"style="display:inline-flex;">
+         <label style="font-size: 28px;padding: 20px;margin-top: 5px;" for="text" id="text1"><b>A=</b></label>   
+        <input style="font-size: 30px;border: 2px solid gray;border-radius: 15px;padding: 20px;" type="number" id="box1" name="text" value="" placeholder="00000-00000">
+        </div>
+        <div class="col-lg-6  mt-5 text-center"style="display:inline-flex;">
+         <label style="font-size: 28px;padding: 20px;margin-top: 5px;" for="text" id="text1"><b>B=</b></label>   
+        <input style="font-size: 30px;border: 2px solid gray;border-radius: 15px;padding: 20px;" type="number" id="box2" name="text" value="" placeholder="00000-00000">
+    </div>
+    </div>
+    
+      <div class="col-lg-12 text-center mt-4 ">
+    <button onclick="calc()" class=" text-white btn  mx-auto " style="background-color:rgb(248, 96, 57);border:3px solid rgb(248, 185, 113); padding: 15px;padding-left: 15px;padding-right: 15px; font-size: 25px;border-radius: 15px;" type="button" id="btn1" value="Calculate"><b>Calculate</b></button>
+    </div> <br>
+    <div class="mySpan  text-center" style="font-size: larger;font-weight: 500;">
+        <div>
+            <span id="addValue"></span>
+        </div>
+        <div>
+            <span id="subValue"></span>
+        </div>
+        <div>
+            <span id="multiplyValue"></span>
+        </div>
+        <div>
+            <span id="divisionValue"></span>
+        </div>
+        <div>
+            <span id="squaredValue"></span>
+        </div>
+        <div>
+            <span id="squareRoot"></span>
+        </div>
+        <div>
+            <span id="logValue"></span>
+        </div>
+        <div>
+            <span id="sinValue"></span>
+        </div>
+        <div>
+            <span id="cosValue"></span>
+        </div>
+        <div>
+            <span id="tanValue"></span>
+        </div>
+    </div>
+
+     </div>
+    
+</body>
+</html> 

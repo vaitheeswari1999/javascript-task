@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>DATE CALCULATOR</title>
+    <script>
+        function calc(){
+        let text1=document.getElementById("input1").value;
+        let text2=document.getElementById("input2").value;
+
+        document.getElementById("one").innerHTML="";
+        document.getElementById("two").innerHTML="";
+
+        if(text1===""){
+           document.getElementById("one").innerHTML="required"; 
+        }
+        if(text2===""){
+            document.getElementById("two").innerHTML="required";
+        }
+        else{
+          let date1 = new Date(text1);
+          let date2 = new Date(text2);
+      
+        const dTime=Math.abs(date2-date1);
+
+        const dMilliseconds=Math.abs(dTime);
+        const dSeconds=Math.abs(dTime/1000);
+        const dMinutes=Math.abs(dTime/(1000*60));
+        const dHour=Math.floor(dTime/(1000*60*60));
+        const dDays=Math.ceil(dTime/(1000*60*60*24));
+        const dWeek=Math.ceil(dTime/(1000*60*60*24*7));
+        const dMonth=Math.floor(dTime/(1000*60*60*24*30.417));
+        const dYears=Math.floor(dTime/(1000*60*60*24*365));
+         var yearArr = ['years' , 'year']
+         var monthArr = ['months' , 'month']
+         var dayArr = ['days' , 'day']
+
+          var year;
+         var month;
+         var day;
+
+         if(dDays>1){
+        day= dayArr[0]
+         }else{
+           day= dayArr[1]
+         }
+          if(dMonth>1){
+        month= monthArr[0]
+         }else{
+
+           month=monthArr[1]
+          }
+          if(dYears>1){
+            year=yearArr[0]
+          }else{
+            year=yearArr[1]
+          }
+        // const dYears=Math.round(dMonth/(12*365));
+        console.log(dMilliseconds+"millseconds");
+        console.log(dSeconds+"Seconds");
+        console.log(dMinutes+"minutes")
+        console.log(dHour+"hours");
+        console.log(dDays+"days");
+        console.log(dWeek+"week"); 
+        console.log(dMonth+" Month");
+        console.log(dYears+"years");
+        document.getElementById("dYears").innerHTML=`The Total Number of <b style="color:red">Years</b> between those two dates<b style="color:red">${dYears}</b>`
+        document.getElementById("dMonth").innerHTML=`The Total Number of <b style="color:red">Month</b> between those two dates<b style="color:red">${dMonth}</b>`
+        document.getElementById("dWeek").innerHTML=`The Total Number of <b style="color:red">week</b> between those two dates<b style="color:red">${dWeek}</b>`
+        document.getElementById("dDays").innerHTML=`The Total Number of <b style="color:red">Days</b> between those two dates<b style="color:red">${dDays}</b>`
+        document.getElementById("dHour").innerHTML=`The Total Number of <b style="color:red">Hour</b> between those two dates<b style="color:red">${dHour}</b>`
+        document.getElementById("dMinutes").innerHTML=`The Total Number of <b style="color:red">Minutes</b> between those two dates<b style="color:red">${dMinutes}</b>`
+        document.getElementById("dSeconds").innerHTML=`The Total Number of <b style="color:red">Seconds</b> between those two dates<b style="color:red">${dSeconds}</b>`
+        document.getElementById("dMilliseconds").innerHTML=`The Total Number of <b style="color:red">Milliseconds</b> between those two dates<b style="color:red">${dMilliseconds}</b>` 
+        
+      document.getElementById("dFinal").innerHTML=`The total gap between <b style="color:red">${dDays}${day} ${dMonth}${month} ${dYears}${year}</b>` 
+        
+      }
+        
+    }
+
+    </script>
+</head>
+<body style="background-color: rgb(182, 126, 235);">
+   <div class="container"></div>
+      <div class="col-lg-12">
+        <h2 class="heading text-center mt-4" style=" color:rgb(248, 96, 50);text-shadow: 2px 2px 2px rgb(204, 195, 195);">DATE CALCULATOR</h2>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col-lg-6 text-center mt-3">
+          <!-- <label style="font-size: 20px; padding: 10px" for="number" id="text1"
+            ></label > -->
+          <input
+            style=" font-size: 20px; padding: 10px; border-radius: 10px;width: 250px;height: 60px;border: none; "type="date"id="input1" name="date1">
+            <br>
+          <span id="one" style="color: red"></span>
+        </div>
+        <div class="col-lg-6 text-center mt-3">
+          <!-- <label style="font-size: 20px; padding: 10px" for="number" id="text2"></label> -->
+          <input
+            style=" font-size: 20px;padding: 10px;border-radius: 10px; width: 250px; height: 60px;border: none;" type="date" id="input2" name="DATE2">
+          <br>
+          <span id="two" style="color: red"></span>
+        </div>
+      </div>
+      <div class="col-lg-12 text-center mt-5">
+        <button onclick="calc()"type="button" style="border-radius: 10px;font-size: large; padding: 5px;color:white;background-color:rgb(248, 96, 57);border:2px solid rgb(248, 185, 113); height: 50px;width: 100px;"> Calculate </button>
+      </div>
+      <div class="output mt-5 text-center" style="font-size: 20px">
+      <div id="dYears"></div>
+      <div id="dMonth"></div>
+      <div id="dWeek"></div>
+      <div id="dDays"></div>
+      <div id="dHour"></div>
+      <div id="dMinutes"></div>
+      <div id="dSeconds"></div>
+      <div id="dMilliseconds"></div>
+      <div id="dFinal"></div>
+      </div>
+    </div> 
+</body>
+</html>

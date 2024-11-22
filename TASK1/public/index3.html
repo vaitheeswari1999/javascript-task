@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>CHARACTERS CALCULATOR</title>
+    <script>
+        function calculate(){
+            let textArea=document.getElementById("textArea");
+            if(textArea.value==''){
+            alert("Textarea is empty")
+            }
+            
+            else{
+                let textArea=document.getElementById("textArea").value;
+                let output=document.getElementById("inputTotal");
+                array=textArea.split(' ').join('');
+                console.log(array.split(''))
+                let finalArray=array.split('')
+                for (let i = 0; i < finalArray.length; i++) {
+                let count=0;
+                for (let j = 0;j < finalArray.length;j++) {
+                if (finalArray[i]==finalArray[j]&&i>j) {
+                break;    
+                }
+                if (finalArray[i]==finalArray[j]) {
+                  count++;  
+                }
+                    
+                }
+                if (count>0) {
+                if(output.innerHTML=='') {
+                    output.innerHTML='<h3>this inputs contains'+' '+'<b style=color:red>'+finalArray.length+'</b>'+' '+'characters.</h3>'+
+                    '<h5>this total inputs'+' '+'<b style=color:red>'+count+finalArray[i]+'</b>'+' '+'characters.</h5>'
+                }
+                else{
+                    output.innerHTML+='<h5>this total inputs'+' '+'<b style=color:red>'+count+finalArray[i]+'</b>'+' '+'characters.</h5>'
+                }
+                }
+                }
+            }
+            }    
+    </script>
+</head>
+<body style="background-color: rgb(182, 126, 235);">
+   <div class="container text-align:left">
+    <div class="heading text-center col-lg-12">
+        <h1 style="color:rgb(248, 96, 50);text-shadow: 2px 2px 2px rgb(204, 195, 195);">CHARACTERS CALCULATOR</h1>
+        
+    </div>
+    <div class="content mt-5 text-center">
+    <h2 style="color:rgb(248, 96, 50);">Texthere:</h2>
+     <textarea type="text" name="textArea" id="textArea" style="width: 450px;height: 130px;margin-top: 20px;  border: 2px solid gray;border-radius: 15px;"></textarea>
+     <br>
+     <button onclick="calculate()" class=" text-white mt-4 " style="background-color:rgb(248, 96, 57); font-size: 25px;border-radius: 10px;border:3px solid rgb(248, 185, 113);" type="button" id="btn1"><b>Calculate</b></button>
+    </div>
+    <div class="output font-weight:500 font-size:larger text-center">
+        <div id="inputTotal" style="font-weight: 500;font-size: larger;"></div>
+        
+   </div>
+</body>
+</html>
