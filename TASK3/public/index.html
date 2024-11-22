@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK3</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="style.js"></script>
+</head>
+<body>
+    <div class="container">
+      <h1 class="text-center m-3 text-danger">COMPANY</h1>
+      <div class="row m-3 mt-3">
+      <div class="col-sm-4 mt-2">
+        <div class="p-2">
+            <label for="text"><b>Company Name</b><sup class="text-danger">*</sup></label>
+            <input type="text" class="form-control" id="input1" placeholder="Company name" name="input1">
+            <span id="one" class="text-danger"></span>
+        </div>
+        <div class="p-2">
+            <label for="select"><b>State</b><sup class="text-danger">*</sup></label>
+            <select type="select" class="form-control" id="input2" placeholder="Choose" name="input2">
+             <option value="Choose">choose..</option>
+             <option value="State1">State1</option>
+             <option value="State2">State2</option>
+             <option value="State3">State3</option>
+             </select>
+             <span id="two" class="text-danger"></span>
+            
+        </div>
+        <div class="p-2">
+            <label for="text-center"><b>Phone Number1</b><sup class="text-danger">*</sup></label>
+            <input type="number" class="form-control" id="input3" placeholder="Phone Number1" name="input3">
+            <span id="three" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-2">
+         <div class="p-2">
+            <label for="text"><b>Company Type</b><sup class="text-danger">*</sup></label>
+            <select type="select" class="form-control" id="input4" placeholder="Choose.." name="input4">
+                <option value="Choose">Choose..</option>
+                <option value="Company2">Company2</option>
+                <option value="Company3">Company3</option>
+                <option value="Company4">Company4</option>
+             </select>
+             <span id="four" class="text-danger"></span>
+        </div>
+        <div class="p-2">
+            <label for="text"><b>City</b><sup class="text-danger">*</sup></label>
+            <select type="select" class="form-control" id="input5" placeholder="Choose.." name="input5">
+                <option value="Choose">Choose..</option>
+                <option value="City2">City2</option>
+                <option value="City3">City3</option>
+                <option value="City4">City4</option>
+             </select>
+              <span id="five" class="text-danger"></span>
+        </div>
+        <div class="p-2">
+            <label for="text"><b>Phone Number2</b><sup class="text-danger">*</sup></label>
+            <input type="number" class="form-control" id="input6" placeholder="Phone Number2" name="input6">
+             <span id="six" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-sm-4 mt-2">
+        <div class="p-2">
+            <label for="text"><b>GST Number</b><sup class="text-danger">*</sup></label>
+            <input type="text" class="form-control" id="input7" placeholder="GST Number" name="input7">
+             <span id="seven" class="text-danger"></span>
+        </div>
+        <div class="p-2">
+            <label for="text"><b>Country</b><sup class="text-danger">*</sup></label>
+            <select type="select" class="form-control" id="input8" placeholder="Choose.." name="input8">
+                <option value="Choose">Choose..</option>
+                <option value="Country2">Country2</option>
+                <option value="Country3">Country3</option>
+                <option value="Country4">Country4</option>
+             </select>
+              <span id="eight" class="text-danger"></span>
+        </div>
+        <div class="p-2">
+            <label for="text"><b>Contact Person</b><sup class="text-danger">*</sup></label>
+            <input type="text" class="form-control" id="input9" placeholder="Contact Person" name="input9">
+             <span id="nine" class="text-danger"></span>
+        </div>    
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm-6 ">
+        <label for="text"><b>SALES ORDER TRANSACTION</b><sup class="text-danger">*</sup></label>
+        
+            <input type="text" id="input10" class="form-control mt-3" placeholder="So prefix" name="input10">
+             <span id="ten" class="text-danger"></span>
+            <br>
+            <input type="text" id="input11" class="form-control" placeholder="So sefix" name="input11">
+             <span id="eleven" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row justify-content-end mt-5">
+        <button onclick="validationFunction()" type="button" class="text-white bg-danger m-2" style="height: 40px;width: 100px;border: none;">Submit</button>
+        <button onclick="resetFunction()" type="button" class="text-white bg-success m-2" style="height: 40px;width: 100px;border: none;">Reset</button>
+    </div>
+    <div class="list" id="list">
+            <div class="col-lg-12 mt-5">
+            <table class="table table-bordered" style="border: 1px solid rgb(197, 191, 191);">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>GST Number</th>
+                        <th>Phone Number1</th>
+                        <th>Update/Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="answer"></tbody>
+                
+            </table>
+            </div>
+        </div>
+
+    
+    </div>
+</body>
+</html>

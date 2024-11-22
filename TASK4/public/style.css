@@ -1,0 +1,14 @@
+body{
+    background-image: url("assets/calcy3.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+width: 75px;
+}
+.calcy{
+    border: 1px solid rgb(48, 46, 46);
+    border-radius: 20px;
+     box-shadow: inset 3px 3px 20px black;
+     padding: 25px;
+}
